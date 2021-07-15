@@ -19,7 +19,8 @@ function Chat() {
                     <div>
                         <div key={id} className={`msg ${uid === auth.currentUser.uid ? 'sent' : 'received'}`}>
                             <img src={photoURL} alt="" />
-                            {uid === auth.currentUser.uid ? <p>{text}</p>  : <p>{displayName}: {text}</p> }
+                            
+                            {uid === auth.currentUser.uid ? <p>{text}</p>  : <p><div style={{fontWeight: '700'}}>{displayName}:</div> {text}</p> }
                                
                         </div>
                     </div>
